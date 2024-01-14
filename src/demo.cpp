@@ -106,6 +106,8 @@ int main(int argc, char **argv) {
     lidartypename = ldlidar::LDType::LD_06;
   } else if (!strcmp(product_name.c_str(),"LDLiDAR_LD19")) {
     lidartypename = ldlidar::LDType::LD_19;
+  } else if (!strcmp(product_name.c_str(),"LDLiDAR_STL19P")) {
+    lidartypename = ldlidar::LDType::STL_19P;
   } else {
     RCLCPP_ERROR(node->get_logger(),"Error, input param <product_name> is fail!!");
     exit(EXIT_FAILURE);
