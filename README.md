@@ -8,8 +8,7 @@ mkdir -p ldlidar_ros2_ws/src
 
 cd ldlidar_ros2_ws/src
 
-git clone  https://github.com/ldrobotSensorTeam/ldlidar_ros2.git
-
+git clone -b design3 https://github.com/norlab-ulaval/ldlidar_ros2.git
 git submodule update --init --recursive
 ```
 ## step 1: system setup
@@ -157,6 +156,16 @@ colcon build
   - start ld19 lidar node and show on the Rviz2:
   ``` bash
   ros2 launch ldlidar_ros2 viewer_ld19.launch.py
+  ```
+
+- The product is LDROBOT LiDAR STL-19P
+  - start ld19 lidar node:
+  ``` bash
+  ros2 launch ldlidar_ros2 stl19p.launch.py
+  ```
+  - start ld19 lidar node and show on the Rviz2:
+  ``` bash
+  ros2 launch ldlidar_ros2 viewer_stl19p.launch.py
   ```
 
 ## step 4: Data visualization
